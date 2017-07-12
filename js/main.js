@@ -1,26 +1,8 @@
-var slider = document.getElementsByTagName('img');
-var index = 0 ;
+var image= [];
+var temps= 2000;
 
-setInterval(suivant, 2000);
+image[0]= '../img/slider1.jpg'
+image[1]= '../img/slider2.jpg'
+image[3]= '../img/slider3.jpg'
 
-function suivant(){
-  console.log(index);
-  slider[index].style.display="none";
-  if (index==2) {
-    index=0;
-  } else {
-    index++;
-slider[index].style.display="block";
-  }
-}
-
-
-function precedent() {
-   slider[index].style.display="none";
-   if (index==0) {
-     index=2;
-   } else {
-    index--;
-    slider[index].style.display="block";
-  }
-}
+function carousel
