@@ -4,7 +4,7 @@ var index = 0 ;
 setInterval(suivant, 2000);
 
 function suivant(){
-  // console.log(index);
+  console.log(index);
   images[index].style.display="none";
   if (index==images.length-1) {
     index=0;
