@@ -1,11 +1,28 @@
-var i= 0;
-var image= [];
-var temps= 2000;
+var images = document.getElementsByTagName('img');
+var index = 0 ;
 
-image[0]= '../img/slider1.jpg'
-image[1]= '../img/slider2.jpg'
-image[3]= '../img/slider3.jpg'
+setInterval(suivant, 2000);
 
-function carousel(){
-  document.getElementsByTagName('img').src=image[i]
+function suivant(){
+  console.log(index);
+  images[index].style.display="none";
+  if (index==images.length-1) {
+    index=0;
+    images[index].style.display="block";
+  } else {
+    index++;
+    images[index].style.display="block";
+  }
+}
+
+
+function precedent() {
+   images[index].style.display="none";
+   if (index==0) {
+     index=2;
+     images[index].style.display="block";
+   } else {
+    index--;
+    images[index].style.display="block";
+  }
 }
